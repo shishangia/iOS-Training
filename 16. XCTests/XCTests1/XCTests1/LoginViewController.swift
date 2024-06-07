@@ -19,7 +19,14 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         if isUsernameValid(usernameTextField.text) && isPasswordValid(passwordTextField.text) {
-            // Code to move to next ViewController
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let nextViewController = storyboard.instantiateViewController(withIdentifier: "LoginDetailViewController") as? LoginDetailViewController {
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+            }
+        } else {
+            let alert = UIAlertController(title: "Invalid Input", message: "Username or password is invalid.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
 }

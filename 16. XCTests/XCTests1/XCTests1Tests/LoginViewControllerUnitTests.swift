@@ -11,15 +11,26 @@ import XCTest
 class LoginViewControllerUnitTests: XCTestCase {
 
     var testLoginViewController: LoginViewController?
+    var navigationController: UINavigationController?
+    var window: UIWindow?
 
     override func setUpWithError() throws {
+        window = UIWindow()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         testLoginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        if let testLoginViewController = testLoginViewController {
+            navigationController = UINavigationController(rootViewController: testLoginViewController)
+        }
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
         testLoginViewController?.loadViewIfNeeded()
     }
 
     override func tearDownWithError() throws {
         testLoginViewController = nil
+        navigationController = nil
+                window = nil
     }
     
     func testNilUsername() {
@@ -71,22 +82,28 @@ class LoginViewControllerUnitTests: XCTestCase {
     }
 
     func testInvalidLogin() {
-        if let testLoginViewController = testLoginViewController,
-           let navigationController = testLoginViewController.navigationController {
+        if let testLoginViewController = testLoginViewController {
             testLoginViewController.usernameTextField.text = "abc12345678"
             testLoginViewController.passwordTextField.text = "abc12@"
             testLoginViewController.loginButtonPressed(self)
-            XCTAssertTrue(navigationController.topViewController is LoginViewController)
+            XCTAssertTrue(testLoginViewController.presentedViewController is UIAlertController)
+            if let alert = testLoginViewController.presentedViewController as? UIAlertController {
+                XCTAssertEqual(alert.title, "Invalid Input")
+                XCTAssertEqual(alert.message, "Username or password is invalid.")
+            }
         }
     }
 
     func testValidLogin() {
-        if let testLoginViewController = testLoginViewController,
-           let navigationController = testLoginViewController.navigationController {
-            testLoginViewController.usernameTextField.text = "abc12345"
-            testLoginViewController.passwordTextField.text = "abc@12345"
-            testLoginViewController.loginButtonPressed(self)
-            XCTAssertTrue(navigationController.topViewController is LoginDetailViewController)
+        guard let testLoginViewController = testLoginViewController,
+              let navigationController = testLoginViewController.navigationController else {
+            XCTFail("LoginViewController is not embedded in a navigation controller.")
+            return
         }
+        testLoginViewController.usernameTextField.text = "abc12345"
+        testLoginViewController.passwordTextField.text = "abc@12345"
+        testLoginViewController.loginButtonPressed(UIButton())
+        RunLoop.current.run(until: Date())
+        XCTAssertTrue(navigationController.topViewController is LoginDetailViewController)
     }
 }
