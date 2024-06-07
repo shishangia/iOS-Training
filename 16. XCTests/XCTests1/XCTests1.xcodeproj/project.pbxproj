@@ -17,6 +17,8 @@
 		406EBBCD2C1262F100D16887 /* XCTests1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EBBCC2C1262F100D16887 /* XCTests1UITests.swift */; };
 		406EBBCF2C1262F100D16887 /* XCTests1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EBBCE2C1262F100D16887 /* XCTests1UITestsLaunchTests.swift */; };
 		406EBBDC2C12632A00D16887 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EBBDB2C12632A00D16887 /* DataModel.swift */; };
+		40DA1F452C13953000763CCE /* FizzBuzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DA1F442C13953000763CCE /* FizzBuzz.swift */; };
+		40DA1F472C1395C900763CCE /* FizzBuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DA1F462C1395C900763CCE /* FizzBuzzTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		406EBBCC2C1262F100D16887 /* XCTests1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTests1UITests.swift; sourceTree = "<group>"; };
 		406EBBCE2C1262F100D16887 /* XCTests1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTests1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		406EBBDB2C12632A00D16887 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		40DA1F432C13945A00763CCE /* XCTests1.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = XCTests1.xctestplan; sourceTree = "<group>"; };
+		40DA1F442C13953000763CCE /* FizzBuzz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzz.swift; sourceTree = "<group>"; };
+		40DA1F462C1395C900763CCE /* FizzBuzzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 		406EBB9F2C1262ED00D16887 = {
 			isa = PBXGroup;
 			children = (
+				40DA1F432C13945A00763CCE /* XCTests1.xctestplan */,
 				406EBBAA2C1262ED00D16887 /* XCTests1 */,
 				406EBBC12C1262F100D16887 /* XCTests1Tests */,
 				406EBBCB2C1262F100D16887 /* XCTests1UITests */,
@@ -109,6 +115,7 @@
 				406EBBB62C1262F100D16887 /* LaunchScreen.storyboard */,
 				406EBBB92C1262F100D16887 /* Info.plist */,
 				406EBBDB2C12632A00D16887 /* DataModel.swift */,
+				40DA1F442C13953000763CCE /* FizzBuzz.swift */,
 			);
 			path = XCTests1;
 			sourceTree = "<group>";
@@ -117,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				406EBBC22C1262F100D16887 /* XCTests1Tests.swift */,
+				40DA1F462C1395C900763CCE /* FizzBuzzTests.swift */,
 			);
 			path = XCTests1Tests;
 			sourceTree = "<group>";
@@ -261,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40DA1F452C13953000763CCE /* FizzBuzz.swift in Sources */,
 				406EBBB02C1262ED00D16887 /* ViewController.swift in Sources */,
 				406EBBDC2C12632A00D16887 /* DataModel.swift in Sources */,
 				406EBBAC2C1262ED00D16887 /* AppDelegate.swift in Sources */,
@@ -273,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				406EBBC32C1262F100D16887 /* XCTests1Tests.swift in Sources */,
+				40DA1F472C1395C900763CCE /* FizzBuzzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
