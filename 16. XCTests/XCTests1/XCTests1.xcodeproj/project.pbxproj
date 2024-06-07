@@ -19,6 +19,9 @@
 		406EBBDC2C12632A00D16887 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EBBDB2C12632A00D16887 /* DataModel.swift */; };
 		40DA1F452C13953000763CCE /* FizzBuzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DA1F442C13953000763CCE /* FizzBuzz.swift */; };
 		40DA1F472C1395C900763CCE /* FizzBuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DA1F462C1395C900763CCE /* FizzBuzzTests.swift */; };
+		40E0F4E42C139C950086A8A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F4E32C139C950086A8A0 /* LoginViewController.swift */; };
+		40E0F4E62C139FC80086A8A0 /* LoginViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F4E52C139FC80086A8A0 /* LoginViewControllerUnitTests.swift */; };
+		40E0F4E82C13A2900086A8A0 /* LoginDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F4E72C13A2900086A8A0 /* LoginDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		40DA1F432C13945A00763CCE /* XCTests1.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = XCTests1.xctestplan; sourceTree = "<group>"; };
 		40DA1F442C13953000763CCE /* FizzBuzz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzz.swift; sourceTree = "<group>"; };
 		40DA1F462C1395C900763CCE /* FizzBuzzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzTests.swift; sourceTree = "<group>"; };
+		40E0F4E32C139C950086A8A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		40E0F4E52C139FC80086A8A0 /* LoginViewControllerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerUnitTests.swift; sourceTree = "<group>"; };
+		40E0F4E72C13A2900086A8A0 /* LoginDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,8 @@
 				406EBBB92C1262F100D16887 /* Info.plist */,
 				406EBBDB2C12632A00D16887 /* DataModel.swift */,
 				40DA1F442C13953000763CCE /* FizzBuzz.swift */,
+				40E0F4E32C139C950086A8A0 /* LoginViewController.swift */,
+				40E0F4E72C13A2900086A8A0 /* LoginDetailViewController.swift */,
 			);
 			path = XCTests1;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 			children = (
 				406EBBC22C1262F100D16887 /* XCTests1Tests.swift */,
 				40DA1F462C1395C900763CCE /* FizzBuzzTests.swift */,
+				40E0F4E52C139FC80086A8A0 /* LoginViewControllerUnitTests.swift */,
 			);
 			path = XCTests1Tests;
 			sourceTree = "<group>";
@@ -269,7 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40E0F4E42C139C950086A8A0 /* LoginViewController.swift in Sources */,
 				40DA1F452C13953000763CCE /* FizzBuzz.swift in Sources */,
+				40E0F4E82C13A2900086A8A0 /* LoginDetailViewController.swift in Sources */,
 				406EBBB02C1262ED00D16887 /* ViewController.swift in Sources */,
 				406EBBDC2C12632A00D16887 /* DataModel.swift in Sources */,
 				406EBBAC2C1262ED00D16887 /* AppDelegate.swift in Sources */,
@@ -281,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40E0F4E62C139FC80086A8A0 /* LoginViewControllerUnitTests.swift in Sources */,
 				406EBBC32C1262F100D16887 /* XCTests1Tests.swift in Sources */,
 				40DA1F472C1395C900763CCE /* FizzBuzzTests.swift in Sources */,
 			);
