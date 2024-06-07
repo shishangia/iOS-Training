@@ -8,16 +8,13 @@
 import UIKit
 
 extension HomePageViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
+        switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as? SearchTableViewCell else {
                 fatalError()
@@ -28,7 +25,8 @@ extension HomePageViewController: UITableViewDataSource {
                 fatalError()
             }
             cell.categoryCollectionView.dataSource = self
-            cell.categoryCollectionView.tag = indexPath.section
+            cell.categoryCollectionView.delegate = self
+            cell.categoryCollectionView.tag = indexPath.row
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "VerifiedUserTableViewCell", for: indexPath) as? VerifiedUserTableViewCell else {
@@ -40,7 +38,7 @@ extension HomePageViewController: UITableViewDataSource {
                 fatalError()
             }
             cell.propertyListCollectionView.dataSource = self
-            cell.propertyListCollectionView.tag = indexPath.section
+            cell.propertyListCollectionView.tag = indexPath.row
             return cell
         default:
             fatalError()

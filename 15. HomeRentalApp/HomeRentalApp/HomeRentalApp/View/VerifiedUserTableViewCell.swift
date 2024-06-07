@@ -9,6 +9,7 @@ import UIKit
 
 class VerifiedUserTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var checkmarkImageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
 
     override func awakeFromNib() {
@@ -27,6 +28,10 @@ extension VerifiedUserTableViewCell {
         self.containerView.layer.cornerRadius = 5
         self.containerView.layer.borderColor = UIColor.lightGray.cgColor
         self.containerView.layer.borderWidth = 0.25
-        self.containerView.layer.masksToBounds = true
+        self.containerView.layer.shadowColor = UIColor.black.cgColor
+        self.containerView.layer.shadowOpacity = 0.25
+        self.containerView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.containerView.layer.shadowRadius = 3
+        self.containerView.layer.masksToBounds = false
     }
 }
