@@ -21,8 +21,8 @@ class HomePageViewController: UIViewController {
     
     private func setupUI() {
         homeContentTableView.dataSource = self
-        categories = Mock.generateCategories()
-        properties = Mock.generateProperties()
+        categories = Category.generateMock()
+        properties = Property.generateMock()
         homeContentTableView.reloadData()
     }
 }
