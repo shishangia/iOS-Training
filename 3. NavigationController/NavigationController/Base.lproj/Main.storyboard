@@ -115,6 +115,7 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="7cp-OW-NYy" id="lFp-WC-yYZ"/>
+                        <outlet property="sendForwardButton" destination="feG-Lf-wDB" id="cGC-ri-QkV"/>
                         <outlet property="textField" destination="TUq-M7-DpV" id="srU-HC-0X7"/>
                     </connections>
                 </viewController>
