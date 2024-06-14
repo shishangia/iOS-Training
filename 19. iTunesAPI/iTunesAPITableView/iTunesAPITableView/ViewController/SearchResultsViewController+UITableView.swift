@@ -18,8 +18,17 @@ extension SearchResultsViewController: UITableViewDataSource {
         }
         if let searchItem = searchResult?.results[indexPath.row] {
             cell.artistNameLabel.text = searchItem.artistName
-            cell.genreLabel.text = searchItem.primaryGenreName
+            cell.genreLabel.text = "\(searchItem.primaryGenreName) -- \(searchItem.country)"
             cell.priceLabel.text = searchItem.collectionPrice == 0.0 ? Constants.buttonTitle : "$\(searchItem.collectionPrice)"
+            if let albumArtURL = URL(string: searchItem.artworkUrl100) {
+                APIHelper.shared.fetchAlbumArt(from: albumArtURL) { image in
+                    DispatchQueue.main.async {
+                        if tableView.indexPath(for: cell) == indexPath {
+                            cell.albumArtImageView.image = image
+                        }
+                    }
+                }
+            }
         }
         return cell
     }

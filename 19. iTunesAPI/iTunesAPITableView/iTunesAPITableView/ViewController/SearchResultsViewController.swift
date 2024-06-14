@@ -27,7 +27,10 @@ extension SearchResultsViewController {
     }
 
     private func fetchSearchItem() {
-        APIHelper.shared.fetchSearchResult { [weak self] result in
+        guard let serverURL = URL(string: Constants.apiURL) else {
+            fatalError(Constants.Errors.invalidURLError)
+        }
+        APIHelper.shared.fetchSearchResult(model: SearchResult.self, apiURL: serverURL) { [weak self] result in
             DispatchQueue.main.async {
                 self?.activityIndicator.stopAnimating()
                 self?.searchResult = result

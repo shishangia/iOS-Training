@@ -12,4 +12,5 @@ struct SearchItem: Codable {
     let collectionPrice: Double
     let country: String
     let primaryGenreName: String
+    let artworkUrl100: String
 }

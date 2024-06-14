@@ -5,19 +5,15 @@
 //  Created by Shivam Shishangia on 11/06/24.
 //
 
-import Foundation
+import UIKit
 
 class APIHelper {
     static let shared = APIHelper()
 
     private init() {}
 
-    func fetchSearchResult(completion: @escaping ((SearchResult?) -> ())) {
-        guard let serverURL = URL(string: Constants.apiURL) else {
-            fatalError(Constants.Errors.invalidURLError)
-        }
-
-        URLSession.shared.dataTask(with: URLRequest(url: serverURL)) { data, response, error in
+    func fetchSearchResult<T: Decodable>(model: T.Type, apiURL: URL, completion: @escaping (T?) -> Void) {
+        URLSession.shared.dataTask(with: apiURL) { data, response, error in
             guard error == nil else {
                 fatalError(Constants.Errors.error + "\(String(describing: error))")
             }
@@ -27,11 +23,27 @@ class APIHelper {
             }
 
             do {
-                let searchResult = try JSONDecoder().decode(SearchResult.self, from: data)
+                let searchResult = try JSONDecoder().decode(T.self, from: data)
                 completion(searchResult)
             } catch {
                 completion(nil)
             }
+        }.resume()
+    }
+
+    func fetchAlbumArt(from url: URL, completion: @escaping ((UIImage?) -> ())) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard error == nil else {
+                completion(nil)
+                return
+            }
+
+            guard let data = data else {
+                completion(nil)
+                return
+            }
+            let image = UIImage(data: data)
+            completion(image)
         }.resume()
     }
 }

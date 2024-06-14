@@ -27,10 +27,12 @@ class SearchResultTableViewCell: UITableViewCell {
 
 extension SearchResultTableViewCell {
     private func setupUI() {
-        albumArtImageView.layer.borderColor = UIColor.black.cgColor
-        albumArtImageView.layer.borderWidth = 1
+        albumArtImageView.layer.borderColor = UIColor.white.cgColor
+        albumArtImageView.layer.borderWidth = 0.75
 
         priceLabel.layer.cornerRadius = 5
+        priceLabel.layer.borderColor = UIColor.systemBlue.cgColor
+        priceLabel.layer.borderWidth = 1
         priceLabel.layer.masksToBounds = true
     }
 }

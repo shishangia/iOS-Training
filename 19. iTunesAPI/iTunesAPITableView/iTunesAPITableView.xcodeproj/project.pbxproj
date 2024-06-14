@@ -49,12 +49,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		405218D82C1A287200EC6B1E /* Constants */ = {
+		405218D82C1A287200EC6B1E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
 				405218D92C1A288100EC6B1E /* Constants.swift */,
 			);
-			path = Constants;
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		40BFAAB42C18F1CF00AFA16E = {
@@ -76,7 +76,7 @@
 		40BFAABF2C18F1CF00AFA16E /* iTunesAPITableView */ = {
 			isa = PBXGroup;
 			children = (
-				405218D82C1A287200EC6B1E /* Constants */,
+				405218D82C1A287200EC6B1E /* Constant */,
 				40BFAAD72C18F1F000AFA16E /* Network */,
 				40BFAAD62C18F1E900AFA16E /* ViewController */,
 				40BFAAD52C18F1E400AFA16E /* View */,
