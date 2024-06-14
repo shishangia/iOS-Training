@@ -12,7 +12,6 @@ class ToDoListViewController: UIViewController {
     @IBOutlet weak var toDoListTableView: UITableView!
 
     var toDoListViewModel = ToDoListViewModel()
-    var toDoList: [ToDo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
