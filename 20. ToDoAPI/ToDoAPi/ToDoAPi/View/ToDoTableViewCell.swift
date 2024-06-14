@@ -19,5 +19,10 @@ class ToDoTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+}
 
+extension ToDoTableViewCell {
+    func configure(with toDoItem: ToDo) {
+        titleLabel.text = toDoItem.title
+    }
 }

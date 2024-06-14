@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ToDoListViewController.swift
 //  ToDoAPi
 //
 //  Created by Shivam Shishangia on 12/06/24.
@@ -7,10 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ToDoListViewController: UIViewController {
 
     @IBOutlet weak var toDoListTableView: UITableView!
 
+    var toDoListViewModel = ToDoListViewModel()
     var toDoList: [ToDo] = []
 
     override func viewDidLoad() {
@@ -19,17 +20,13 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController {
+extension ToDoListViewController {
     
     private func setupUI() {
+        self.navigationItem.title = Constants.viewControllerTitle.rawValue
         toDoListTableView.dataSource = self
-        APIHelper.shared.fetchToDoData { toDoList in
-            guard let toDoList = toDoList else {
-                print("Error: Got no data")
-                return
-            }
+        toDoListViewModel.fetchData {
             DispatchQueue.main.async {
-                self.toDoList = toDoList
                 self.toDoListTableView.reloadData()
             }
         }
