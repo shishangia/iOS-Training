@@ -12,14 +12,14 @@ class APIHelper {
 
     private init() {}
 
-    func fetchSearchResult<T: Decodable>(model: T.Type, apiURL: URL, completion: @escaping (T?) -> Void) {
+    func fetchData<T: Decodable>(apiURL: URL, completion: @escaping (T?) -> Void) {
         URLSession.shared.dataTask(with: apiURL) { data, response, error in
             guard error == nil else {
-                fatalError(Constants.Errors.error + "\(String(describing: error))")
+                fatalError(Constants.Errors.error.rawValue + "\(String(describing: error))")
             }
 
             guard let data = data else {
-                fatalError(Constants.Errors.fetchDataError)
+                fatalError(Constants.Errors.fetchDataError.rawValue)
             }
 
             do {
@@ -31,7 +31,7 @@ class APIHelper {
         }.resume()
     }
 
-    func fetchAlbumArt(from url: URL, completion: @escaping ((UIImage?) -> ())) {
+    func fetchImage(from url: URL, completion: @escaping ((UIImage?) -> ())) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil else {
                 completion(nil)

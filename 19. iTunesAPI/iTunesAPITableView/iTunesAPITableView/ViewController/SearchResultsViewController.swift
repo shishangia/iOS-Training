@@ -12,10 +12,12 @@ class SearchResultsViewController: UIViewController {
     @IBOutlet weak var searchResultsTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
+    var searchResultsViewModel = SearchResultsViewModel()
     var searchResult: SearchResult?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBar()
         setupUI()
         fetchSearchItem()
     }
@@ -24,18 +26,25 @@ class SearchResultsViewController: UIViewController {
 extension SearchResultsViewController {
     private func setupUI() {
         searchResultsTableView.dataSource = self
+        searchResultsTableView.backgroundColor = .black
+    }
+
+    private func setupNavBar() {
+        navigationItem.title = Constants.viewControllerTitle.rawValue
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 
     private func fetchSearchItem() {
-        guard let serverURL = URL(string: Constants.apiURL) else {
-            fatalError(Constants.Errors.invalidURLError)
-        }
-        APIHelper.shared.fetchSearchResult(model: SearchResult.self, apiURL: serverURL) { [weak self] result in
+        searchResultsViewModel.fetchSearchData {
             DispatchQueue.main.async {
-                self?.activityIndicator.stopAnimating()
-                self?.searchResult = result
-                self?.searchResultsTableView.reloadData()
+                self.stopAnimatingAndReloadTable()
             }
         }
+    }
+
+    private func stopAnimatingAndReloadTable() {
+        self.activityIndicator.stopAnimating()
+        self.searchResultsTableView.reloadData()
     }
 }

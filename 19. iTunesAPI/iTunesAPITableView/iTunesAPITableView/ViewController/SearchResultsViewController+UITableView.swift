@@ -9,26 +9,15 @@ import UIKit
 
 extension SearchResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResult?.resultCount ?? 0
+        return searchResultsViewModel.searchResultCount()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.tableViewCellReuseIdentifier, for: indexPath) as? SearchResultTableViewCell else {
-            fatalError(Constants.Errors.cellDequeueError)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.tableViewCellReuseIdentifier.rawValue, for: indexPath) as? SearchResultTableViewCell else {
+            fatalError(Constants.Errors.cellDequeueError.rawValue)
         }
-        if let searchItem = searchResult?.results[indexPath.row] {
-            cell.artistNameLabel.text = searchItem.artistName
-            cell.genreLabel.text = "\(searchItem.primaryGenreName) -- \(searchItem.country)"
-            cell.priceLabel.text = searchItem.collectionPrice == 0.0 ? Constants.buttonTitle : "$\(searchItem.collectionPrice)"
-            if let albumArtURL = URL(string: searchItem.artworkUrl100) {
-                APIHelper.shared.fetchAlbumArt(from: albumArtURL) { image in
-                    DispatchQueue.main.async {
-                        if tableView.indexPath(for: cell) == indexPath {
-                            cell.albumArtImageView.image = image
-                        }
-                    }
-                }
-            }
+        if let searchItem = searchResultsViewModel.getSearchItemAt(indexPath) {
+            cell.configure(using: searchItem)
         }
         return cell
     }

@@ -27,12 +27,21 @@ class SearchResultTableViewCell: UITableViewCell {
 
 extension SearchResultTableViewCell {
     private func setupUI() {
-        albumArtImageView.layer.borderColor = UIColor.white.cgColor
-        albumArtImageView.layer.borderWidth = 0.75
+        albumArtImageView.setBorder(borderWidth: 0.75, borderColor: UIColor.white.cgColor)
 
+        priceLabel.setBorder(borderWidth: 1, borderColor: UIColor.systemBlue.cgColor)
         priceLabel.layer.cornerRadius = 5
-        priceLabel.layer.borderColor = UIColor.systemBlue.cgColor
-        priceLabel.layer.borderWidth = 1
         priceLabel.layer.masksToBounds = true
+    }
+}
+
+extension SearchResultTableViewCell {
+    func configure(using searchItem: SearchItem) {
+        artistNameLabel.text = searchItem.artistName
+        genreLabel.text = "\(searchItem.primaryGenreName) -- \(searchItem.country)"
+        priceLabel.text = searchItem.collectionPrice == 0.0 ? Constants.buttonTitle.rawValue : "$\(searchItem.collectionPrice)"
+        if let albumArtURL = URL(string: searchItem.artworkUrl100) {
+            albumArtImageView.fetchAndSetImage(from: albumArtURL)
+        }
     }
 }
