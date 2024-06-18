@@ -11,7 +11,10 @@
 		405218E72C1CE30400EC6B1E /* SearchResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405218E62C1CE30400EC6B1E /* SearchResultsViewModel.swift */; };
 		405218EA2C1CE40600EC6B1E /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405218E92C1CE40600EC6B1E /* UIImageView+.swift */; };
 		405218EC2C1CE62800EC6B1E /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405218EB2C1CE62800EC6B1E /* UIView+.swift */; };
-		405218F42C1CF3F100EC6B1E /* iTunesAPITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405218F32C1CF3F100EC6B1E /* iTunesAPITableViewTests.swift */; };
+		405218F42C1CF3F100EC6B1E /* SearchResultsViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405218F32C1CF3F100EC6B1E /* SearchResultsViewModelUnitTests.swift */; };
+		405219312C221DD700EC6B1E /* SearchResultsViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405219302C221DD700EC6B1E /* SearchResultsViewController+UISearchBarDelegate.swift */; };
+		405219332C2220CC00EC6B1E /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405219322C2220CC00EC6B1E /* String+.swift */; };
+		405219352C22237500EC6B1E /* SearchResultsViewController+UIScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405219342C22237500EC6B1E /* SearchResultsViewController+UIScrollViewDelegate.swift */; };
 		40BFAAC12C18F1CF00AFA16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAAC02C18F1CF00AFA16E /* AppDelegate.swift */; };
 		40BFAAC32C18F1CF00AFA16E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAAC22C18F1CF00AFA16E /* SceneDelegate.swift */; };
 		40BFAAC82C18F1CF00AFA16E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BFAAC62C18F1CF00AFA16E /* Main.storyboard */; };
@@ -21,7 +24,7 @@
 		40BFAADB2C18F32500AFA16E /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAADA2C18F32500AFA16E /* SearchItem.swift */; };
 		40BFAADD2C18F3C700AFA16E /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAADC2C18F3C700AFA16E /* SearchResultsViewController.swift */; };
 		40BFAADF2C18F42C00AFA16E /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAADE2C18F42C00AFA16E /* SearchResultTableViewCell.swift */; };
-		40BFAAE12C18F7A500AFA16E /* SearchResultsViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAAE02C18F7A500AFA16E /* SearchResultsViewController+UITableView.swift */; };
+		40BFAAE12C18F7A500AFA16E /* SearchResultsViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAAE02C18F7A500AFA16E /* SearchResultsViewController+UITableViewDataSource.swift */; };
 		40BFAAE32C18F8CE00AFA16E /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAAE22C18F8CE00AFA16E /* APIHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +44,10 @@
 		405218E92C1CE40600EC6B1E /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		405218EB2C1CE62800EC6B1E /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		405218F12C1CF3F100EC6B1E /* iTunesAPITableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesAPITableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		405218F32C1CF3F100EC6B1E /* iTunesAPITableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPITableViewTests.swift; sourceTree = "<group>"; };
+		405218F32C1CF3F100EC6B1E /* SearchResultsViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModelUnitTests.swift; sourceTree = "<group>"; };
+		405219302C221DD700EC6B1E /* SearchResultsViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchResultsViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
+		405219322C2220CC00EC6B1E /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		405219342C22237500EC6B1E /* SearchResultsViewController+UIScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchResultsViewController+UIScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		40BFAABD2C18F1CF00AFA16E /* iTunesAPITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAPITableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40BFAAC02C18F1CF00AFA16E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40BFAAC22C18F1CF00AFA16E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +59,7 @@
 		40BFAADA2C18F32500AFA16E /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
 		40BFAADC2C18F3C700AFA16E /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		40BFAADE2C18F42C00AFA16E /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
-		40BFAAE02C18F7A500AFA16E /* SearchResultsViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchResultsViewController+UITableView.swift"; sourceTree = "<group>"; };
+		40BFAAE02C18F7A500AFA16E /* SearchResultsViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchResultsViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		40BFAAE22C18F8CE00AFA16E /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,19 +97,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		405218E82C1CE3D500EC6B1E /* UIKitExtension */ = {
+		405218E82C1CE3D500EC6B1E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				405218E92C1CE40600EC6B1E /* UIImageView+.swift */,
 				405218EB2C1CE62800EC6B1E /* UIView+.swift */,
+				405219322C2220CC00EC6B1E /* String+.swift */,
 			);
-			path = UIKitExtension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		405218F22C1CF3F100EC6B1E /* iTunesAPITableViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				405218F32C1CF3F100EC6B1E /* iTunesAPITableViewTests.swift */,
+				405218F32C1CF3F100EC6B1E /* SearchResultsViewModelUnitTests.swift */,
 			);
 			path = iTunesAPITableViewTests;
 			sourceTree = "<group>";
@@ -129,7 +136,7 @@
 		40BFAABF2C18F1CF00AFA16E /* iTunesAPITableView */ = {
 			isa = PBXGroup;
 			children = (
-				405218E82C1CE3D500EC6B1E /* UIKitExtension */,
+				405218E82C1CE3D500EC6B1E /* Extension */,
 				405218E52C1CE2EB00EC6B1E /* ViewModel */,
 				405218D82C1A287200EC6B1E /* Constant */,
 				40BFAAD72C18F1F000AFA16E /* Network */,
@@ -167,7 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				40BFAADC2C18F3C700AFA16E /* SearchResultsViewController.swift */,
-				40BFAAE02C18F7A500AFA16E /* SearchResultsViewController+UITableView.swift */,
+				40BFAAE02C18F7A500AFA16E /* SearchResultsViewController+UITableViewDataSource.swift */,
+				405219302C221DD700EC6B1E /* SearchResultsViewController+UISearchBarDelegate.swift */,
+				405219342C22237500EC6B1E /* SearchResultsViewController+UIScrollViewDelegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -281,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				405218F42C1CF3F100EC6B1E /* iTunesAPITableViewTests.swift in Sources */,
+				405218F42C1CF3F100EC6B1E /* SearchResultsViewModelUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +303,15 @@
 				405218EA2C1CE40600EC6B1E /* UIImageView+.swift in Sources */,
 				40BFAADF2C18F42C00AFA16E /* SearchResultTableViewCell.swift in Sources */,
 				40BFAADD2C18F3C700AFA16E /* SearchResultsViewController.swift in Sources */,
-				40BFAAE12C18F7A500AFA16E /* SearchResultsViewController+UITableView.swift in Sources */,
+				405219312C221DD700EC6B1E /* SearchResultsViewController+UISearchBarDelegate.swift in Sources */,
+				40BFAAE12C18F7A500AFA16E /* SearchResultsViewController+UITableViewDataSource.swift in Sources */,
 				405218DA2C1A288100EC6B1E /* Constants.swift in Sources */,
 				40BFAAC12C18F1CF00AFA16E /* AppDelegate.swift in Sources */,
+				405219352C22237500EC6B1E /* SearchResultsViewController+UIScrollViewDelegate.swift in Sources */,
 				40BFAAD92C18F2BF00AFA16E /* SearchResult.swift in Sources */,
 				40BFAAC32C18F1CF00AFA16E /* SceneDelegate.swift in Sources */,
 				40BFAADB2C18F32500AFA16E /* SearchItem.swift in Sources */,
+				405219332C2220CC00EC6B1E /* String+.swift in Sources */,
 				405218E72C1CE30400EC6B1E /* SearchResultsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

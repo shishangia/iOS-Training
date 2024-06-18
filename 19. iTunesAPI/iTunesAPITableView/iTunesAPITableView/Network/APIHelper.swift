@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: Singleton API Class to fetch API data and image
 class APIHelper {
     static let shared = APIHelper()
 

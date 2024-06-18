@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: Extension conforming to UITableViewDataSource
 extension SearchResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResultsViewModel.searchResultCount()
