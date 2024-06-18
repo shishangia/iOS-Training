@@ -8,7 +8,7 @@
 import Foundation
 
 enum Constants: String {
-    case apiURL = "https://itunes.apple.com/search?term=a"
+    case apiURL = "https://itunes.apple.com/search?term="
     case viewControllerTitle = "Search Results"
     case buttonTitle = "Free"
     case tableViewCellReuseIdentifier = "SearchResultTableViewCell"
@@ -18,5 +18,6 @@ enum Constants: String {
         case fetchDataError = "Could not fetch data"
         case error = "Error: "
         case cellDequeueError = "Could not dequeue cell"
+        case testing_ItemNotFound = "Expected to find item at index "
     }
 }

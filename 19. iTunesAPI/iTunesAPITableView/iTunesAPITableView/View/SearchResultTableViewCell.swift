@@ -9,11 +9,13 @@ import UIKit
 
 class SearchResultTableViewCell: UITableViewCell {
 
+    // MARK: IBOutlets
     @IBOutlet weak var albumArtImageView: UIImageView!
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
 
+    // MARK: Lifecycle methods
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -25,6 +27,7 @@ class SearchResultTableViewCell: UITableViewCell {
 
 }
 
+// MARK: Private Helpers
 extension SearchResultTableViewCell {
     private func setupUI() {
         albumArtImageView.setBorder(borderWidth: 0.75, borderColor: UIColor.white.cgColor)
@@ -35,6 +38,7 @@ extension SearchResultTableViewCell {
     }
 }
 
+// MARK: Public Functions
 extension SearchResultTableViewCell {
     func configure(using searchItem: SearchItem) {
         artistNameLabel.text = searchItem.artistName
