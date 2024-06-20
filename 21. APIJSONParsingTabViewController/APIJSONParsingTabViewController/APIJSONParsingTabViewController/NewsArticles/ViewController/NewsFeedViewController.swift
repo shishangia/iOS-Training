@@ -1,18 +1,18 @@
 //
-//  UserListViewController.swift
+//  NewsFeedViewController.swift
 //  APIJSONParsingTabViewController
 //
-//  Created by Shivam Shishangia on 18/06/24.
+//  Created by Shivam Shishangia on 19/06/24.
 //
 
 import UIKit
 
-class UserListViewController: UIViewController {
+class NewsFeedViewController: UIViewController {
 
-    @IBOutlet weak var userListTableView: UITableView!
+    @IBOutlet weak var newsFeedTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    let userListViewModel = UserListViewModel()
+    let newsFeedViewModel = NewsFeedViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +21,13 @@ class UserListViewController: UIViewController {
     }
 }
 
-extension UserListViewController {
+extension NewsFeedViewController {
     private func setupUI() {
-        userListTableView.dataSource = self
+        newsFeedTableView.dataSource = self
     }
 
     private func fetchData() {
-        userListViewModel.fetchUserDetails {
+        newsFeedViewModel.fetchNewsFeed {
             DispatchQueue.main.async {
                 self.stopAnimatingAndReloadTable()
             }
@@ -35,7 +35,7 @@ extension UserListViewController {
     }
 
     private func stopAnimatingAndReloadTable() {
-        self.activityIndicator.stopAnimating()
-        self.userListTableView.reloadData()
+        activityIndicator.stopAnimating()
+        newsFeedTableView.reloadData()
     }
 }

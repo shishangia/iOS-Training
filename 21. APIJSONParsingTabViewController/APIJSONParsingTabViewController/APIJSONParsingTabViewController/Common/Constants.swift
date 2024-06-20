@@ -8,7 +8,9 @@
 import Foundation
 
 enum Constants: String {
-    case tableViewCellReuseIdentifier = "SearchResultTableViewCell"
+    case userListViewControllerTitle = "User List"
+    case showMore = "... show more"
+    case showLess = " show less"
 
     enum APIURL: String {
         case usersAPI = "https://jsonplaceholder.typicode.com/users"
@@ -20,6 +22,9 @@ enum Constants: String {
 
     enum ReuseIdentifiers: String {
         case userListTable = "UserListTableViewCell"
+        case transcodingsListTable = "TranscodingTableViewCell"
+        case newsFeedTable = "NewsFeedTableViewCell"
+        case mealTable = "MealListTableViewCell"
     }
 
     enum Errors: String {
@@ -27,5 +32,15 @@ enum Constants: String {
         case fetchDataError = "Could not fetch data"
         case error = "Error: "
         case cellDequeueError = "Could not dequeue cell"
+    }
+
+    enum LabelPrefix: String {
+        case name = "Name: "
+        case height = "Height: "
+        case birthYear = "Birth Year: "
+        case gender = "Gender: "
+        case created = "Created on: "
+        case id = "ID: "
+        case title = "Title: "
     }
 }
