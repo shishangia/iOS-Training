@@ -28,7 +28,8 @@ extension UserListViewController {
     }
 
     private func fetchData() {
-        userListViewModel.fetchUserDetails {
+        Task {
+            await userListViewModel.fetchUserDetails()
             DispatchQueue.main.async {
                 self.stopAnimatingAndReloadTable()
             }

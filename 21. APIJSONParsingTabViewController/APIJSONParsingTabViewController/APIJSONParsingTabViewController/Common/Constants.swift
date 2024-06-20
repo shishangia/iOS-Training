@@ -29,9 +29,10 @@ enum Constants: String {
 
     enum Errors: String {
         case invalidURLError = "Invalid URL"
-        case fetchDataError = "Could not fetch data"
+        case fetchDataError = "Could not fetch data: "
         case error = "Error: "
         case cellDequeueError = "Could not dequeue cell"
+        case fetchImageError = "Failed to fetch image: "
     }
 
     enum LabelPrefix: String {

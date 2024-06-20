@@ -28,7 +28,8 @@ extension MealListViewController {
     }
 
     private func fetchData() {
-        mealListViewModel.fetchMeals {
+        Task {
+            await mealListViewModel.fetchMeals()
             DispatchQueue.main.async {
                 self.stopAnimatingAndReloadTable()
             }

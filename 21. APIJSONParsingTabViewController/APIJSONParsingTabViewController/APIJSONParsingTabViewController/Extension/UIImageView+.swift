@@ -8,11 +8,15 @@
 import UIKit
 
 extension UIImageView {
-    func fetchAndSetImage(from url: URL) {
-        APIHelper.shared.fetchImage(from: url) { image in
-            DispatchQueue.main.async {
-                self.image = image
+    func fetchAndSetImage(from url: URL) async {
+        do {
+            if let image = try await APIHelper.shared.fetchImage(from: url) {
+                DispatchQueue.main.async {
+                    self.image = image
+                }
             }
+        } catch {
+            print(Constants.Errors.fetchImageError.rawValue + error.localizedDescription)
         }
     }
 }

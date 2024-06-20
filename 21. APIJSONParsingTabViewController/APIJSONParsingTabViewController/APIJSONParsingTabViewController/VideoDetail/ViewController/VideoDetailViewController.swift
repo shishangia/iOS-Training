@@ -31,7 +31,8 @@ extension VideoDetailViewController {
     }
 
     private func fetchData() {
-        videoViewModel.fetchVideoDetail {
+        Task {
+            await videoViewModel.fetchVideo()
             DispatchQueue.main.async {
                 self.stopAnimatingAndReloadView()
             }

@@ -30,7 +30,9 @@ extension NewsFeedTableViewCell {
         sourceAndTimeLabel.text = article.source.name + " " + article.publishedAt
         if let imageURL = article.urlToImage,
            let thumbnailURL = URL(string: imageURL) {
-            thumbnailImageView.fetchAndSetImage(from: thumbnailURL)
+            Task {
+                await thumbnailImageView.fetchAndSetImage(from: thumbnailURL)
+            }
         }
     }
 }

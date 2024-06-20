@@ -19,17 +19,18 @@ extension MealListViewModel {
     func getMealAt(_ indexPath: IndexPath) -> Meal? {
         return mealResponse?.meals[indexPath.row]
     }
-    
-    func fetchMeals(completion: @escaping () -> Void) {
+
+    func fetchMeals() async {
         guard let apiURL = URL(string: Constants.APIURL.recipeAPI.rawValue) else {
             fatalError(Constants.Errors.invalidURLError.rawValue)
         }
-        
-        APIHelper.shared.fetchData(apiURL: apiURL) { [weak self] (mealResponse: MealResponse?) in
-            if let mealResponse = mealResponse {
-                self?.mealResponse = mealResponse
-                completion()
+
+        do {
+            if let mealResponse: MealResponse = try await APIHelper.shared.fetchData(apiURL: apiURL) {
+                self.mealResponse = mealResponse
             }
+        } catch {
+            fatalError(Constants.Errors.fetchDataError.rawValue + error.localizedDescription)
         }
     }
 }

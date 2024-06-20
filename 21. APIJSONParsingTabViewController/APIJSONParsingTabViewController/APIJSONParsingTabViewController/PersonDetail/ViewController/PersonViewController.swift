@@ -32,7 +32,8 @@ extension PersonViewController {
     }
 
     private func fetchData() {
-        personViewModel.fetchPersonDetails {
+        Task {
+            await personViewModel.fetchPersonDetails()
             DispatchQueue.main.async {
                 self.updateUI()
             }

@@ -20,15 +20,16 @@ extension NewsFeedViewModel {
         return newsFeed?.articles[indexPath.row]
     }
 
-    func fetchNewsFeed(completion: @escaping () -> Void) {
+    func fetchNews() async {
         guard let apiURL = URL(string: Constants.APIURL.newsFeedAPI.rawValue) else {
             fatalError(Constants.Errors.invalidURLError.rawValue)
         }
-        APIHelper.shared.fetchData(apiURL: apiURL) { [weak self] (newsFeed: NewsFeed?) in
-            if let newsFeed = newsFeed {
-                self?.newsFeed = newsFeed
-                completion()
+        do {
+            if let newsFeed: NewsFeed = try await APIHelper.shared.fetchData(apiURL: apiURL) {
+                self.newsFeed = newsFeed
             }
+        } catch {
+            fatalError(Constants.Errors.fetchDataError.rawValue + error.localizedDescription)
         }
     }
 }

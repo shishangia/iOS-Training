@@ -19,17 +19,19 @@ extension UserListViewModel {
     func getuserDetailAt(_ indexPath: IndexPath) -> UserDetail {
         return userDetails[indexPath.row]
     }
+
     
-    func fetchUserDetails(completion: @escaping () -> Void) {
+    func fetchUserDetails() async {
         guard let apiURL = URL(string: Constants.APIURL.usersAPI.rawValue) else {
             fatalError(Constants.Errors.invalidURLError.rawValue)
         }
         
-        APIHelper.shared.fetchData(apiURL: apiURL) { [weak self] (userDetails: [UserDetail]?) in
-            if let userDetails = userDetails {
-                self?.userDetails = userDetails
-                completion()
+        do {
+            if let userDetails: [UserDetail] = try await APIHelper.shared.fetchData(apiURL: apiURL) {
+                self.userDetails = userDetails
             }
+        } catch {
+            print("Failed to fetch user details: \(error)")
         }
     }
 }

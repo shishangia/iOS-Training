@@ -32,15 +32,16 @@ extension PersonViewModel {
         return personDetail?.created.formatDate()
     }
 
-    func fetchPersonDetails(completion: @escaping () -> Void) {
+    func fetchPersonDetails() async {
         guard let apiURL = URL(string: Constants.APIURL.peopleAPI.rawValue) else {
             fatalError(Constants.Errors.invalidURLError.rawValue)
         }
-        APIHelper.shared.fetchData(apiURL: apiURL) { [weak self] (personDetail: Person?) in
-            if let personDetail = personDetail {
-                self?.personDetail = personDetail
-                completion()
+        do {
+            if let personDetail: Person = try await APIHelper.shared.fetchData(apiURL: apiURL) {
+                self.personDetail = personDetail
             }
+        } catch {
+            fatalError(Constants.Errors.fetchDataError.rawValue + error.localizedDescription)
         }
     }
 }

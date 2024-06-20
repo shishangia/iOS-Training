@@ -63,7 +63,9 @@ extension MealListTableViewCell {
         self.isExpanded = isExpanded
         updateUI()
         if let thumbnailURL = URL(string: meal.strMealThumb) {
-            thumbnailImageView.fetchAndSetImage(from: thumbnailURL)
+            Task {
+                await thumbnailImageView.fetchAndSetImage(from: thumbnailURL)
+            }
         }
     }
 }

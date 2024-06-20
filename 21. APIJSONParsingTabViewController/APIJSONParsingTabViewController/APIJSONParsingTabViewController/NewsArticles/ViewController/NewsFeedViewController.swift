@@ -27,7 +27,8 @@ extension NewsFeedViewController {
     }
 
     private func fetchData() {
-        newsFeedViewModel.fetchNewsFeed {
+        Task {
+            await newsFeedViewModel.fetchNews()
             DispatchQueue.main.async {
                 self.stopAnimatingAndReloadTable()
             }
