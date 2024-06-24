@@ -11,6 +11,7 @@ class CViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var sendForwardButton: UIButton!
 
     var delegate: PassBackProtocol?
     var labelData: String = ""
@@ -34,6 +35,7 @@ class CViewController: UIViewController {
             self?.label.text = "Previous Screen data: \(text ?? "")"
         }
 
+        nextViewController.previousDataClosure(self.sendForwardButton.titleLabel?.text)
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 

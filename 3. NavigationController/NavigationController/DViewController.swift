@@ -14,6 +14,9 @@ class DViewController: UIViewController {
     
     var labelData: String = ""
     var closure: ((String?) -> Void)?
+    var previousDataClosure: ((String?) -> Void) = { previousButtonData in
+        print("Previous Button Data: \(previousButtonData ?? "")")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
