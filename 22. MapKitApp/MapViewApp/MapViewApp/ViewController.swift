@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
 
-    var locationManager: CLLocationManager?
+    var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +22,16 @@ class ViewController: UIViewController {
 
 extension ViewController {
     private func setupMapView() {
+        mapView.delegate = self
         locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager?.requestWhenInUseAuthorization()
-
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager?.startUpdatingLocation()
-        }
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
 }
 
-extension ViewController: CLLocationManagerDelegate {
+extension ViewController: CLLocationManagerDelegate, MKMapViewDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
