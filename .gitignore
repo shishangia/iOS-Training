@@ -1,5 +1,1 @@
-# Ignore macOS system files
 .DS_Store
-
-# Ignore Xcode user-specific files
-*.xcuserstate
