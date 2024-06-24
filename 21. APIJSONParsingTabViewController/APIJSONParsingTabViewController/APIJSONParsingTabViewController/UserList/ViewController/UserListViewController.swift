@@ -24,10 +24,12 @@ class UserListViewController: UIViewController {
 extension UserListViewController {
     private func setupUI() {
         userListTableView.dataSource = self
+        self.navigationItem.title = Constants.userListViewControllerTitle.rawValue
     }
 
     private func fetchData() {
-        userListViewModel.fetchUserDetails {
+        Task {
+            await userListViewModel.fetchUserDetails()
             DispatchQueue.main.async {
                 self.stopAnimatingAndReloadTable()
             }
@@ -35,7 +37,7 @@ extension UserListViewController {
     }
 
     private func stopAnimatingAndReloadTable() {
-        self.activityIndicator.stopAnimating()
-        self.userListTableView.reloadData()
+        activityIndicator.stopAnimating()
+        userListTableView.reloadData()
     }
 }
