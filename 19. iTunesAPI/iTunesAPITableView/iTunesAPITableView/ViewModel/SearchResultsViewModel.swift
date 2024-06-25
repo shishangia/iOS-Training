@@ -9,12 +9,6 @@ import Foundation
 
 class SearchResultsViewModel {
     private var searchResult: SearchResult?
-    private let apiHelper: APIHelper
-
-    init(searchResult: SearchResult? = nil, apiHelper: APIHelper = APIHelper.shared) {
-        self.searchResult = searchResult
-        self.apiHelper = apiHelper
-    }
 }
 
 // MARK: Public Functions
@@ -24,10 +18,13 @@ extension SearchResultsViewModel {
     }
     
     func getSearchItemAt(_ indexPath: IndexPath) -> SearchItem? {
-        return searchResult?.results[indexPath.row]
+        if indexPath.row <= searchResultCount() {
+            return searchResult?.results[indexPath.row]
+        }
+        return nil
     }
 
-    func fetchSearchDataForKey(_ key: String = "", completion: @escaping () -> Void) {
+    func fetchSearchDataForKey(_ key: String = "", apiHelper: APIHelperProtocol = NetworkAPIHelper.shared, completion: @escaping () -> Void) {
         let apiURLString = Constants.apiURL.rawValue + key.replacingSpacesWithPlus()
         let apiURL = URL(string: apiURLString)
         apiHelper.fetchData(apiURL: apiURL) { [weak self] (searchResult: SearchResult?) in

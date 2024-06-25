@@ -13,10 +13,10 @@ class SearchResultsViewController: UIViewController {
     @IBOutlet weak var searchResultsTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchOnlineSwitch: UISwitch!
 
     // MARK: Variables
     var searchResultsViewModel = SearchResultsViewModel()
-    var searchResult: SearchResult?
 
     // MARK: Lifecycle methods
     override func viewDidLoad() {
@@ -51,7 +51,8 @@ extension SearchResultsViewController {
 // MARK: Internal Function
 extension SearchResultsViewController {
     func fetchSearchItems(for key: String = "") {
-        searchResultsViewModel.fetchSearchDataForKey(key) {
+        let apiManager: APIHelperProtocol = searchOnlineSwitch.isOn ? NetworkAPIHelper.shared : OfflineAPIHelper.shared
+        searchResultsViewModel.fetchSearchDataForKey(key, apiHelper: apiManager) {
             DispatchQueue.main.async {
                 self.stopAnimatingAndReloadTable()
             }
