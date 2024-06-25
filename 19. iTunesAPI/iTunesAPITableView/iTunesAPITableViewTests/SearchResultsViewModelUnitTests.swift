@@ -13,21 +13,32 @@ final class SearchResultsViewModelUnitTests: XCTestCase {
     private var searchResultsViewModel: SearchResultsViewModel?
 
     override func setUpWithError() throws {
-        searchResultsViewModel = SearchResultsViewModel(apiHelper: MockAPIHelper.mockShared)
+        super.setUp()
+        searchResultsViewModel = SearchResultsViewModel()
     }
 
     override func tearDownWithError() throws {
         searchResultsViewModel = nil
+        super.tearDown()
     }
 
+    func testNilDataCount() {
+        XCTAssertEqual(self.searchResultsViewModel?.searchResultCount(), 0)
+    }
+    
     func testDataCount() {
-        searchResultsViewModel?.fetchSearchDataForKey {
+        searchResultsViewModel?.fetchSearchDataForKey(apiHelper: OfflineAPIHelper.shared) {
             XCTAssertEqual(self.searchResultsViewModel?.searchResultCount(), 3)
         }
     }
 
+    func testNilDataAtIndexPath() {
+        let searchItem = self.searchResultsViewModel?.getSearchItemAt(IndexPath(row: 0, section: 0))
+        XCTAssertNil(searchItem)
+    }
+    
     func testDataForIndexPath() {
-        searchResultsViewModel?.fetchSearchDataForKey {
+        searchResultsViewModel?.fetchSearchDataForKey(apiHelper: OfflineAPIHelper.shared) {
             guard let searchItem = self.searchResultsViewModel?.getSearchItemAt(IndexPath(row: 0, section: 0)) else {
                 XCTFail(Constants.Errors.testing_ItemNotFound.rawValue)
                 return

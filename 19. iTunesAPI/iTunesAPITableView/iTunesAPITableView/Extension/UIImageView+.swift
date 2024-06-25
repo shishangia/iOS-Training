@@ -9,9 +9,11 @@ import UIKit
 
 extension UIImageView {
     func fetchAndSetImage(from url: URL) {
-        APIHelper.shared.fetchImage(from: url) { image in
+        NetworkAPIHelper.shared.fetchImage(from: url) { image in
             DispatchQueue.main.async {
-                self.image = image
+                if let image = image {
+                    self.image = image
+                }
             }
         }
     }
