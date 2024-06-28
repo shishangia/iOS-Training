@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class SearchResultsViewController: UIViewController {
 
     // MARK: IBOutlets
     @IBOutlet weak var searchResultsTableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchOnlineSwitch: UISwitch!
 
@@ -33,7 +33,6 @@ extension SearchResultsViewController {
         searchResultsTableView.delegate = self
         searchBar.delegate = self
         searchResultsTableView.backgroundColor = .black
-        activityIndicator.stopAnimating()
     }
 
     private func setupNavBar() {
@@ -43,7 +42,7 @@ extension SearchResultsViewController {
     }
 
     private func stopAnimatingAndReloadTable() {
-        self.activityIndicator.stopAnimating()
+        MBProgressHUD.hide(for: self.view, animated: true)
         self.searchResultsTableView.reloadData()
     }
 }
