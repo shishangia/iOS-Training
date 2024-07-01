@@ -8,96 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    var data = ["Hello", "Hola", "Hi"]
+    @State var labels = Array(repeating: "Swift-UI", count: 9)
 
     var body: some View {
-//        ZStack {
-//            Rectangle()
-//                .fill(Color.red)
-//                .frame(width: 200, height: 200)
-//                .cornerRadius(25)
-//
-//            Text("Shivam")
-//                .font(.system(size: 24))
-//                .background(Color.black)
-//                .foregroundStyle(Color.red)
-//                .cornerRadius(10)
-//                .padding(.horizontal)
-//        }
-        
-//        VStack {
-//            ZStack {
-//                Rectangle()
-//                    .fill(Color.black)
-//                    .frame(width: 200, height: 200)
-//                    .cornerRadius(10)
-//                
-//                Image(systemName: "gear")
-//                    .foregroundColor(Color.white)
-//            }
-//            
-//            Spacer()
-//
-//            ZStack {
-//                Circle()
-//                    .fill(Color.black)
-//                    .frame(width: 200, height: 200)
-//                    .cornerRadius(10)
-//                
-//                Image(systemName: "gear")
-//                    .foregroundColor(Color.white)
-//            }
-//            
-//            Spacer()
-//
-//            ZStack {
-//                Rectangle()
-//                    .fill(Color.black)
-//                    .frame(width: 200, height: 200)
-//                    .cornerRadius(10)
-//                
-//                Image(systemName: "gear")
-//                    .foregroundColor(Color.white)
-//            }
-//
-//        }
+        VStack {
+            Spacer()
 
-//        VStack(spacing: 10) {
-//            ForEach(data.indices) { index in
-//                ZStack {
-//                    Rectangle()
-//                        .fill(Color.black)
-//                        .frame(width: 200, height: 200)
-//                        .cornerRadius(25)
-//                    
-//                    Text("\(index+1): \(data[index])")
-//                        .font(.largeTitle)
-//                        .background(Color.yellow)
-//                        .foregroundStyle(Color.black)
-//                        .cornerRadius(10)
-//                }
-//            }
-//        }
-        
-        VStack() {
-            ForEach(0..<3) { _ in
+            HStack {
                 Spacer()
-                HStack(spacing: 10) {
-                    ForEach(0..<3) { _ in
-                        Spacer()
-                        
-                        Text("Swift-UI")
-                            .font(.system(size: 16))
-                            .foregroundStyle(Color.red)
-                        
-                        Spacer()
+                
+                Button("Add Label") {
+                    labels.append("New Label")
+                }
+                
+                Spacer()
+                
+                Button("Remove Label") {
+                    if !labels.isEmpty {
+                        labels.removeLast()
                     }
                 }
+                Spacer()
             }
+            .padding(.vertical, 50)
+            
+            Spacer()
+
+            List {
+                ForEach(labels.indices, id: \.self) { index in
+                    Text(labels[index])
+                        .font(.system(size: 16))
+                        .foregroundColor(Color.red)
+                }
+            }
+
             Spacer()
         }
-        .padding(.bottom, 50)
     }
 }
 
