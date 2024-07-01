@@ -27,13 +27,20 @@ struct ContentView: View {
                 .foregroundColor(.gray)
                 .padding(.bottom, 20)
             
-            VStack(alignment: .leading, spacing: 20) {
+            List {
                 InputTextFieldWithImage(imageName: "person.fill", placeholderText: "Name", text: $name)
+                    .listRowSeparator(.hidden)
                 InputTextFieldWithImage(imageName: "envelope.fill", placeholderText: "Email", text: $email)
+                    .listRowSeparator(.hidden)
                 InputTextFieldWithImage(imageName: "phone.fill", placeholderText: "Phone", text: $phone)
+                    .listRowSeparator(.hidden)
                 InputTextFieldWithImage(imageName: "lock.fill", placeholderText: "Password", text: $password, isSecure: true)
+                    .listRowSeparator(.hidden)
                 InputTextFieldWithImage(imageName: "lock.fill", placeholderText: "Confirm Password", text: $confirmPassword, isSecure: true)
+                    .listRowSeparator(.hidden)
             }
+            .listStyle(.plain)
+            .frame(height: 350)
             
             Button(action: {
                 print("Create button tapped")
