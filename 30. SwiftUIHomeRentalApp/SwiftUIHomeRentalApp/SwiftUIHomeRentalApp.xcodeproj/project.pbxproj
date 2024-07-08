@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		408C876D2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C876C2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift */; };
+		408C876F2C3C413A0007E9C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C876E2C3C413A0007E9C6 /* ContentView.swift */; };
+		408C87712C3C413F0007E9C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408C87702C3C413F0007E9C6 /* Assets.xcassets */; };
+		408C87742C3C413F0007E9C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408C87732C3C413F0007E9C6 /* Preview Assets.xcassets */; };
+		408C877E2C3C41400007E9C6 /* SwiftUIHomeRentalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C877D2C3C41400007E9C6 /* SwiftUIHomeRentalAppTests.swift */; };
+		408C87882C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87872C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests.swift */; };
+		408C878A2C3C41400007E9C6 /* SwiftUIHomeRentalAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87892C3C41400007E9C6 /* SwiftUIHomeRentalAppUITestsLaunchTests.swift */; };
+		408C87982C3C41800007E9C6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87972C3C41800007E9C6 /* Category.swift */; };
+		408C879A2C3C41DC0007E9C6 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87992C3C41DC0007E9C6 /* Property.swift */; };
+		408C879D2C3C43200007E9C6 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C879C2C3C43200007E9C6 /* TabBarView.swift */; };
+		408C879F2C3C45360007E9C6 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C879E2C3C45360007E9C6 /* SearchBarView.swift */; };
+		408C87A12C3C4C570007E9C6 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A02C3C4C570007E9C6 /* CategoryView.swift */; };
+		408C87A32C3C50E70007E9C6 /* CategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A22C3C50E70007E9C6 /* CategoryGridView.swift */; };
+		408C87A52C3C56420007E9C6 /* VerifiedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A42C3C56420007E9C6 /* VerifiedUserView.swift */; };
+		408C87A72C3C5D840007E9C6 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A62C3C5D840007E9C6 /* PropertyView.swift */; };
+		408C87A92C3C62440007E9C6 /* PropertyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A82C3C62440007E9C6 /* PropertyGridView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		408C877A2C3C41400007E9C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 408C87612C3C413A0007E9C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 408C87682C3C413A0007E9C6;
+			remoteInfo = SwiftUIHomeRentalApp;
+		};
+		408C87842C3C41400007E9C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 408C87612C3C413A0007E9C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 408C87682C3C413A0007E9C6;
+			remoteInfo = SwiftUIHomeRentalApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		408C87692C3C413A0007E9C6 /* SwiftUIHomeRentalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIHomeRentalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		408C876C2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHomeRentalAppApp.swift; sourceTree = "<group>"; };
+		408C876E2C3C413A0007E9C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		408C87702C3C413F0007E9C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		408C87732C3C413F0007E9C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		408C87792C3C41400007E9C6 /* SwiftUIHomeRentalAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIHomeRentalAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		408C877D2C3C41400007E9C6 /* SwiftUIHomeRentalAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHomeRentalAppTests.swift; sourceTree = "<group>"; };
+		408C87832C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIHomeRentalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		408C87872C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHomeRentalAppUITests.swift; sourceTree = "<group>"; };
+		408C87892C3C41400007E9C6 /* SwiftUIHomeRentalAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHomeRentalAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		408C87972C3C41800007E9C6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		408C87992C3C41DC0007E9C6 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		408C879C2C3C43200007E9C6 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		408C879E2C3C45360007E9C6 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		408C87A02C3C4C570007E9C6 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		408C87A22C3C50E70007E9C6 /* CategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridView.swift; sourceTree = "<group>"; };
+		408C87A42C3C56420007E9C6 /* VerifiedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedUserView.swift; sourceTree = "<group>"; };
+		408C87A62C3C5D840007E9C6 /* PropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyView.swift; sourceTree = "<group>"; };
+		408C87A82C3C62440007E9C6 /* PropertyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyGridView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		408C87662C3C413A0007E9C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408C87762C3C41400007E9C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408C87802C3C41400007E9C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		408C87602C3C413A0007E9C6 = {
+			isa = PBXGroup;
+			children = (
+				408C876B2C3C413A0007E9C6 /* SwiftUIHomeRentalApp */,
+				408C877C2C3C41400007E9C6 /* SwiftUIHomeRentalAppTests */,
+				408C87862C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests */,
+				408C876A2C3C413A0007E9C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		408C876A2C3C413A0007E9C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				408C87692C3C413A0007E9C6 /* SwiftUIHomeRentalApp.app */,
+				408C87792C3C41400007E9C6 /* SwiftUIHomeRentalAppTests.xctest */,
+				408C87832C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		408C876B2C3C413A0007E9C6 /* SwiftUIHomeRentalApp */ = {
+			isa = PBXGroup;
+			children = (
+				408C879B2C3C43010007E9C6 /* View */,
+				408C87962C3C416D0007E9C6 /* Model */,
+				408C876C2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift */,
+				408C876E2C3C413A0007E9C6 /* ContentView.swift */,
+				408C87702C3C413F0007E9C6 /* Assets.xcassets */,
+				408C87722C3C413F0007E9C6 /* Preview Content */,
+			);
+			path = SwiftUIHomeRentalApp;
+			sourceTree = "<group>";
+		};
+		408C87722C3C413F0007E9C6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				408C87732C3C413F0007E9C6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		408C877C2C3C41400007E9C6 /* SwiftUIHomeRentalAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				408C877D2C3C41400007E9C6 /* SwiftUIHomeRentalAppTests.swift */,
+			);
+			path = SwiftUIHomeRentalAppTests;
+			sourceTree = "<group>";
+		};
+		408C87862C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				408C87872C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests.swift */,
+				408C87892C3C41400007E9C6 /* SwiftUIHomeRentalAppUITestsLaunchTests.swift */,
+			);
+			path = SwiftUIHomeRentalAppUITests;
+			sourceTree = "<group>";
+		};
+		408C87962C3C416D0007E9C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				408C87972C3C41800007E9C6 /* Category.swift */,
+				408C87992C3C41DC0007E9C6 /* Property.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		408C879B2C3C43010007E9C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				408C879C2C3C43200007E9C6 /* TabBarView.swift */,
+				408C879E2C3C45360007E9C6 /* SearchBarView.swift */,
+				408C87A02C3C4C570007E9C6 /* CategoryView.swift */,
+				408C87A22C3C50E70007E9C6 /* CategoryGridView.swift */,
+				408C87A42C3C56420007E9C6 /* VerifiedUserView.swift */,
+				408C87A62C3C5D840007E9C6 /* PropertyView.swift */,
+				408C87A82C3C62440007E9C6 /* PropertyGridView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		408C87682C3C413A0007E9C6 /* SwiftUIHomeRentalApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 408C878D2C3C41400007E9C6 /* Build configuration list for PBXNativeTarget "SwiftUIHomeRentalApp" */;
+			buildPhases = (
+				408C87652C3C413A0007E9C6 /* Sources */,
+				408C87662C3C413A0007E9C6 /* Frameworks */,
+				408C87672C3C413A0007E9C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftUIHomeRentalApp;
+			productName = SwiftUIHomeRentalApp;
+			productReference = 408C87692C3C413A0007E9C6 /* SwiftUIHomeRentalApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		408C87782C3C41400007E9C6 /* SwiftUIHomeRentalAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 408C87902C3C41400007E9C6 /* Build configuration list for PBXNativeTarget "SwiftUIHomeRentalAppTests" */;
+			buildPhases = (
+				408C87752C3C41400007E9C6 /* Sources */,
+				408C87762C3C41400007E9C6 /* Frameworks */,
+				408C87772C3C41400007E9C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				408C877B2C3C41400007E9C6 /* PBXTargetDependency */,
+			);
+			name = SwiftUIHomeRentalAppTests;
+			productName = SwiftUIHomeRentalAppTests;
+			productReference = 408C87792C3C41400007E9C6 /* SwiftUIHomeRentalAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		408C87822C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 408C87932C3C41400007E9C6 /* Build configuration list for PBXNativeTarget "SwiftUIHomeRentalAppUITests" */;
+			buildPhases = (
+				408C877F2C3C41400007E9C6 /* Sources */,
+				408C87802C3C41400007E9C6 /* Frameworks */,
+				408C87812C3C41400007E9C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				408C87852C3C41400007E9C6 /* PBXTargetDependency */,
+			);
+			name = SwiftUIHomeRentalAppUITests;
+			productName = SwiftUIHomeRentalAppUITests;
+			productReference = 408C87832C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		408C87612C3C413A0007E9C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					408C87682C3C413A0007E9C6 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					408C87782C3C41400007E9C6 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 408C87682C3C413A0007E9C6;
+					};
+					408C87822C3C41400007E9C6 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 408C87682C3C413A0007E9C6;
+					};
+				};
+			};
+			buildConfigurationList = 408C87642C3C413A0007E9C6 /* Build configuration list for PBXProject "SwiftUIHomeRentalApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 408C87602C3C413A0007E9C6;
+			productRefGroup = 408C876A2C3C413A0007E9C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				408C87682C3C413A0007E9C6 /* SwiftUIHomeRentalApp */,
+				408C87782C3C41400007E9C6 /* SwiftUIHomeRentalAppTests */,
+				408C87822C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		408C87672C3C413A0007E9C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408C87742C3C413F0007E9C6 /* Preview Assets.xcassets in Resources */,
+				408C87712C3C413F0007E9C6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408C87772C3C41400007E9C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408C87812C3C41400007E9C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		408C87652C3C413A0007E9C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408C87A32C3C50E70007E9C6 /* CategoryGridView.swift in Sources */,
+				408C876F2C3C413A0007E9C6 /* ContentView.swift in Sources */,
+				408C87A12C3C4C570007E9C6 /* CategoryView.swift in Sources */,
+				408C876D2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift in Sources */,
+				408C87A52C3C56420007E9C6 /* VerifiedUserView.swift in Sources */,
+				408C879A2C3C41DC0007E9C6 /* Property.swift in Sources */,
+				408C87A92C3C62440007E9C6 /* PropertyGridView.swift in Sources */,
+				408C879D2C3C43200007E9C6 /* TabBarView.swift in Sources */,
+				408C87A72C3C5D840007E9C6 /* PropertyView.swift in Sources */,
+				408C879F2C3C45360007E9C6 /* SearchBarView.swift in Sources */,
+				408C87982C3C41800007E9C6 /* Category.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408C87752C3C41400007E9C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408C877E2C3C41400007E9C6 /* SwiftUIHomeRentalAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408C877F2C3C41400007E9C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408C87882C3C41400007E9C6 /* SwiftUIHomeRentalAppUITests.swift in Sources */,
+				408C878A2C3C41400007E9C6 /* SwiftUIHomeRentalAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		408C877B2C3C41400007E9C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 408C87682C3C413A0007E9C6 /* SwiftUIHomeRentalApp */;
+			targetProxy = 408C877A2C3C41400007E9C6 /* PBXContainerItemProxy */;
+		};
+		408C87852C3C41400007E9C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 408C87682C3C413A0007E9C6 /* SwiftUIHomeRentalApp */;
+			targetProxy = 408C87842C3C41400007E9C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		408C878B2C3C41400007E9C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		408C878C2C3C41400007E9C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		408C878E2C3C41400007E9C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIHomeRentalApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shivam.SwiftUIHomeRentalApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		408C878F2C3C41400007E9C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIHomeRentalApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shivam.SwiftUIHomeRentalApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		408C87912C3C41400007E9C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shivam.SwiftUIHomeRentalAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIHomeRentalApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUIHomeRentalApp";
+			};
+			name = Debug;
+		};
+		408C87922C3C41400007E9C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shivam.SwiftUIHomeRentalAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIHomeRentalApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUIHomeRentalApp";
+			};
+			name = Release;
+		};
+		408C87942C3C41400007E9C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shivam.SwiftUIHomeRentalAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftUIHomeRentalApp;
+			};
+			name = Debug;
+		};
+		408C87952C3C41400007E9C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shivam.SwiftUIHomeRentalAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftUIHomeRentalApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		408C87642C3C413A0007E9C6 /* Build configuration list for PBXProject "SwiftUIHomeRentalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408C878B2C3C41400007E9C6 /* Debug */,
+				408C878C2C3C41400007E9C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		408C878D2C3C41400007E9C6 /* Build configuration list for PBXNativeTarget "SwiftUIHomeRentalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408C878E2C3C41400007E9C6 /* Debug */,
+				408C878F2C3C41400007E9C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		408C87902C3C41400007E9C6 /* Build configuration list for PBXNativeTarget "SwiftUIHomeRentalAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408C87912C3C41400007E9C6 /* Debug */,
+				408C87922C3C41400007E9C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		408C87932C3C41400007E9C6 /* Build configuration list for PBXNativeTarget "SwiftUIHomeRentalAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408C87942C3C41400007E9C6 /* Debug */,
+				408C87952C3C41400007E9C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 408C87612C3C413A0007E9C6 /* Project object */;
+}
