@@ -23,6 +23,8 @@
 		408C87A52C3C56420007E9C6 /* VerifiedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A42C3C56420007E9C6 /* VerifiedUserView.swift */; };
 		408C87A72C3C5D840007E9C6 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A62C3C5D840007E9C6 /* PropertyView.swift */; };
 		408C87A92C3C62440007E9C6 /* PropertyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A82C3C62440007E9C6 /* PropertyGridView.swift */; };
+		408C87AB2C3C73460007E9C6 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87AA2C3C73460007E9C6 /* LoginPageView.swift */; };
+		408C87AD2C3C785F0007E9C6 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87AC2C3C785F0007E9C6 /* LoginButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		408C87A42C3C56420007E9C6 /* VerifiedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedUserView.swift; sourceTree = "<group>"; };
 		408C87A62C3C5D840007E9C6 /* PropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyView.swift; sourceTree = "<group>"; };
 		408C87A82C3C62440007E9C6 /* PropertyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyGridView.swift; sourceTree = "<group>"; };
+		408C87AA2C3C73460007E9C6 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
+		408C87AC2C3C785F0007E9C6 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				408C87A42C3C56420007E9C6 /* VerifiedUserView.swift */,
 				408C87A62C3C5D840007E9C6 /* PropertyView.swift */,
 				408C87A82C3C62440007E9C6 /* PropertyGridView.swift */,
+				408C87AA2C3C73460007E9C6 /* LoginPageView.swift */,
+				408C87AC2C3C785F0007E9C6 /* LoginButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,7 +310,9 @@
 				408C876F2C3C413A0007E9C6 /* ContentView.swift in Sources */,
 				408C87A12C3C4C570007E9C6 /* CategoryView.swift in Sources */,
 				408C876D2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift in Sources */,
+				408C87AB2C3C73460007E9C6 /* LoginPageView.swift in Sources */,
 				408C87A52C3C56420007E9C6 /* VerifiedUserView.swift in Sources */,
+				408C87AD2C3C785F0007E9C6 /* LoginButtonView.swift in Sources */,
 				408C879A2C3C41DC0007E9C6 /* Property.swift in Sources */,
 				408C87A92C3C62440007E9C6 /* PropertyGridView.swift in Sources */,
 				408C879D2C3C43200007E9C6 /* TabBarView.swift in Sources */,

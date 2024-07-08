@@ -15,22 +15,22 @@ struct TabBarView: View {
                     Label("Home", systemImage: "house.fill")
                 }
             
-            ContentView()
+            LoginPageView()
                 .tabItem {
                     Label("Favorites", systemImage: "heart.fill")
                 }
             
-            ContentView()
+            LoginPageView()
                 .tabItem {
                     Label("Place an Ad", systemImage: "plus.circle.fill")
                 }
             
-            ContentView()
+            LoginPageView()
                 .tabItem {
                     Label("Chats", systemImage: "message.fill")
                 }
             
-            ContentView()
+            LoginPageView()
                 .tabItem {
                     Label("Menu", systemImage: "line.3.horizontal")
                 }
