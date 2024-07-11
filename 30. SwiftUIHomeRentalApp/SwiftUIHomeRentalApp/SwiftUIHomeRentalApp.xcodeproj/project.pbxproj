@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4083AC482C3DC66A009CC265 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083AC472C3DC66A009CC265 /* EmailLoginView.swift */; };
+		4083AC4A2C3DCB0F009CC265 /* EmailDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083AC492C3DCB0F009CC265 /* EmailDetailsView.swift */; };
 		408C876D2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C876C2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift */; };
 		408C876F2C3C413A0007E9C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C876E2C3C413A0007E9C6 /* ContentView.swift */; };
 		408C87712C3C413F0007E9C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408C87702C3C413F0007E9C6 /* Assets.xcassets */; };
@@ -24,7 +26,7 @@
 		408C87A72C3C5D840007E9C6 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A62C3C5D840007E9C6 /* PropertyView.swift */; };
 		408C87A92C3C62440007E9C6 /* PropertyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87A82C3C62440007E9C6 /* PropertyGridView.swift */; };
 		408C87AB2C3C73460007E9C6 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87AA2C3C73460007E9C6 /* LoginPageView.swift */; };
-		408C87AD2C3C785F0007E9C6 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87AC2C3C785F0007E9C6 /* LoginButtonView.swift */; };
+		408C87AD2C3C785F0007E9C6 /* LoginOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C87AC2C3C785F0007E9C6 /* LoginOptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4083AC472C3DC66A009CC265 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
+		4083AC492C3DCB0F009CC265 /* EmailDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDetailsView.swift; sourceTree = "<group>"; };
 		408C87692C3C413A0007E9C6 /* SwiftUIHomeRentalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIHomeRentalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C876C2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHomeRentalAppApp.swift; sourceTree = "<group>"; };
 		408C876E2C3C413A0007E9C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,7 +69,7 @@
 		408C87A62C3C5D840007E9C6 /* PropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyView.swift; sourceTree = "<group>"; };
 		408C87A82C3C62440007E9C6 /* PropertyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyGridView.swift; sourceTree = "<group>"; };
 		408C87AA2C3C73460007E9C6 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
-		408C87AC2C3C785F0007E9C6 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
+		408C87AC2C3C785F0007E9C6 /* LoginOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +175,9 @@
 				408C87A62C3C5D840007E9C6 /* PropertyView.swift */,
 				408C87A82C3C62440007E9C6 /* PropertyGridView.swift */,
 				408C87AA2C3C73460007E9C6 /* LoginPageView.swift */,
-				408C87AC2C3C785F0007E9C6 /* LoginButtonView.swift */,
+				408C87AC2C3C785F0007E9C6 /* LoginOptionView.swift */,
+				4083AC472C3DC66A009CC265 /* EmailLoginView.swift */,
+				4083AC492C3DCB0F009CC265 /* EmailDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,13 +318,15 @@
 				408C876D2C3C413A0007E9C6 /* SwiftUIHomeRentalAppApp.swift in Sources */,
 				408C87AB2C3C73460007E9C6 /* LoginPageView.swift in Sources */,
 				408C87A52C3C56420007E9C6 /* VerifiedUserView.swift in Sources */,
-				408C87AD2C3C785F0007E9C6 /* LoginButtonView.swift in Sources */,
+				408C87AD2C3C785F0007E9C6 /* LoginOptionView.swift in Sources */,
+				4083AC482C3DC66A009CC265 /* EmailLoginView.swift in Sources */,
 				408C879A2C3C41DC0007E9C6 /* Property.swift in Sources */,
 				408C87A92C3C62440007E9C6 /* PropertyGridView.swift in Sources */,
 				408C879D2C3C43200007E9C6 /* TabBarView.swift in Sources */,
 				408C87A72C3C5D840007E9C6 /* PropertyView.swift in Sources */,
 				408C879F2C3C45360007E9C6 /* SearchBarView.swift in Sources */,
 				408C87982C3C41800007E9C6 /* Category.swift in Sources */,
+				4083AC4A2C3DCB0F009CC265 /* EmailDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
