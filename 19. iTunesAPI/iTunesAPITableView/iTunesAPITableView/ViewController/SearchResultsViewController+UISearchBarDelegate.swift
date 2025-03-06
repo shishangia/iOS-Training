@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 // MARK: Extension conforming to UISearchBarDelegate
 extension SearchResultsViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        activityIndicator.startAnimating()
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         fetchSearchItems(for: searchBar.text ?? "")
     }
 }
